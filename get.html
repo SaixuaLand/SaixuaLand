@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- gtamc.ru -->
+<html>
+
+<!-- Mirrored from emeraldix.pro/get by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 15 Dec 2016 21:01:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Emeraldix | Магазин</title>
+	<base #href="">
+	<link rel="stylesheet" href="style/css/bootstrap.css">
+	<link rel="stylesheet" href="style/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style/css/main.css">
+    <link rel="stylesheet" href="style/css/jquery.formstyler.css">
+    <link rel="shortcut icon" href="style/img/ico.png">
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-static-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+					<span class="sr-only">Открыть меню</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="index.html" class="navbar-brand">Emeraldix</a>
+			</div>
+			<div class="collapse navbar-collapse" id="menu">
+				<ul class="nav navbar-nav">
+                    <li>
+						<a href="index.html"><i class="fa fa-home"></i> Главная</a>
+					</li>
+					<li>
+						<a href="https://vk.com/im?sel=-117147346"><i class="fa fa-vk"></i> Вопросы</a>
+					</li>
+                    <li>
+                    <a href="https://vk.com/emeraldix" target="_blank"><i class="fa fa-users"></i> Группа ВКонтакте
+								</a>
+                       </li>
+                    <li>
+                    <a href="https://vk.com/topic-117147346_34523183" target="_blank"><i class="fa fa-users"></i> Описание Доната
+								</a>
+                       </li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+							<i class="fa fa fa-bullhorn"></i> Другое <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" role="menu">
+							<li class="dropdown-header">Прочее</li>
+							<li>
+								<a href="https://vk.com/emeraldix" target="_blank">
+									<i class="fa fa-users"></i> Группа ВКонтакте
+								</a>
+							</li>
+							<li>
+							<a href="https://vk.com/bungeecord" target="_blank">
+								<i class="fa fa-users"></i> Администратор
+							</a>
+							<li>
+							<a href="console.html" target="_blank">
+								<i class="fa fa-users"></i> Консоль сервера
+							</a>
+						</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<a href="#" class="btn btn-info navbar-btn navbar-right hidden-sm hidden-xs" onclick="prompt('Скопируйте наш IP адрес и вставьте в ваш клиент:','craftmc.ru'); return false;">
+						Наш IP: craftmc.ru					</a>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	
+	<footer class="footer">
+  		<div class="container text-center">
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+		    (function (d, w, c) {
+		        (w[c] = w[c] || []).push(function() {
+		            try {
+		                w.yaCounter41495484 = new Ya.Metrika({
+		                    id:41495484,
+		                    clickmap:true,
+		                    trackLinks:true,
+		                    accurateTrackBounce:true,
+		                    webvisor:true,
+		                    trackHash:true
+		                });
+		            } catch(e) { }
+		        });
+
+		        var n = d.getElementsByTagName("script")[0],
+		            s = d.createElement("script"),
+		            f = function () { n.parentNode.insertBefore(s, n); };
+		        s.type = "text/javascript";
+		        s.async = true;
+		        s.src = "../mc.yandex.ru/metrika/watch.js";
+
+		        if (w.opera == "[object Opera]") {
+		            d.addEventListener("DOMContentLoaded", f, false);
+		        } else { f(); }
+		    })(document, window, "yandex_metrika_callbacks");
+		</script>
+		<!-- /Yandex.Metrika counter -->
+			<div class="col-sm-6 col-md-offset-4 col-md-4"><p class="text-center">2012-2016 © Emeraldix. Все права защищены!</p></div>
+    		<div class="col-sm-6 col-md-4"><a href="https://minepay.me/"><p class="text-right"><kbd style="background-color: #e74c3c;">MINEPAY.ME</kbd></p></a></div>
+  		</div>
+	</footer>
+
+	<script src="../ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="style/js/bootstrap.min.js"></script>
+    <script src="style/js/jquery.formstyler.min.js"></script>
+	<script type="text/javascript">
+	var servers = 1;
+	var serverID = 0;
+	var cost = 0;
+	function selectMenu()
+	{
+		$('#server' + serverID).hide(400);
+		$('.server-select').show(400);
+	}
+	$("#selid").change(function () {
+		$('#selid option:selected').each(function () {
+			cost = $(this).data('cost');
+		});
+		$('#dbuy').text('Купить за ' + cost + ' руб');
+		}
+	);
+
+
+	function Buy(){
+		var name = $("[name = 'name']").val();
+		var group = $("[name = 'group']").val();
+		$.post('index138e.html', {name: name, group: group}, function(data){
+			if(data == 'error'){$('#error').show('slow').html('Ошибка!')}
+			else{location.href = data}
+		});
+	}
+	</script>
+</body>
+
+<!-- Mirrored from emeraldix.pro/get by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 15 Dec 2016 21:01:21 GMT -->
+</html>
+<!-- gtamc.ru -->
